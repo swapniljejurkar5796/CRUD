@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% include 'header.html'%}
+
+
+{% block title%} ADD BOOK {% endblock%}
+
+{% block body %}
+<body background="static/update.jpg"><br><br><br>
+<div class="container">
+  <form action="" method="POST">
+    <table class="table" width="100%" cellspacing="2" cellpadding="2" border="3" align="center"  >
+    <tr>
+      <td style="color:black" bgcolor="#90EE90"><center><strong>Book Name</strong></center></td>
+      <td> <input type= "text" name="book_name" class="form-control" placeholder ="         Update Book Name             "  value="{{ books.book_name}}" required="True"></td>
+    </tr>
+    <tr>
+      <td style="color:black" bgcolor="#90EE90"><center><strong>Description</strong></center></td>
+      <td> <input type= "text" name="book_description" class="form-control"  placeholder ="         Update Description             " value="{{ books.book_description}}" required="True"></td>
+    </tr>
+    <tr>
+      <td style="color:black" bgcolor="#90EE90"><center><strong>Writer</strong></center></td>
+      <td> <input type= "text" name="book_writer" class="form-control"  placeholder ="         Update Writer Name             " value="{{ books.book_writer}}" required="True"></td>
+    </tr>
+    <tr>
+      <td style="color:black" bgcolor="#90EE90"><center><strong>Country</strong></center></td>
+      <td> <input type= "text" name="country" class="form-control" placeholder ="         Update Country Name             " value="{{ books.country}}" required="True"></td>
+    </tr>
+       <td colspan="2">
+         <center><input type="submit" name="ADD" value="UPDATE" class="btn btn-warning" onclick="alert('Updated Successfully !!!')"></center>
+
+       </td>
+
+    </table>
+
+  </form>
+
+</div>
+
+
+</body>
+{% endblock %}

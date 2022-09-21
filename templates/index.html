@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% include 'header.html'%}
+
+
+{% block title%} ADD BOOK {% endblock%}
+
+{% block body %}
+<body background="static/mf.jpg">
+<br><br>
+<div class="container">
+  <div>
+    <div class="col-md-12" text-center ><h1 style ="display: table;margin: 5px auto 5px auto;padding: 5px;font-size: 30px;background-color: cyan;color:black;"><center>-: Books List :- </center></h1></div>
+    </div>
+<div>
+  <table class="table">
+    <thead style ="background-color:black;color:cyan">
+      <th>ID</th>
+      <th>BOOK_NAME</th>
+      <th>DESCRIPTION</th>
+      <th>COUNTRY</th>
+      <th>WRITER</th>
+        <th >ACTIONS</th>
+    </thead>
+    <tbody>
+      {% for book in books %}
+      <tr style="font-weight:bold">
+         <td style="color:black" bgcolor="#90EE90"> {{ loop.index }}</td>
+         <td style="color:black" bgcolor="#90EE90"> {{ book.book_name }}</td>
+         <td style="color:black" bgcolor="#90EE90"> {{ book.book_description }}</td>
+         <td style="color:black" bgcolor="#90EE90"> {{ book.country }}</td>
+         <td style="color:black" bgcolor="#90EE90"> {{ book.book_writer }}</td>
+         <td bgcolor="#90EE90">
+        <center> <span >
+          <a href="/{{ book.id}}/update" style ="font-size:25px;color:green;"><i class="fas fa-edit"></i></a></span>
+
+                     |    |
+
+           <span >
+             <a href="/{{ book.id}}/delete" style ="font-size:25px;color:red;"><i class="fas fa-trash-alt"></i></a></span></center>
+         </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+</div>
+
+
+</body>
+{% block footer %}
+<footer style ="display: table;margin: 5px auto 5px auto;padding: 5px;font-size: 10px;background-color: black;color:cyan;"><center><strong>
+   <p style="color:cyan;background-color:black">Copyright © 2022 Swapnil_Jejurkar. All rights reserved<br>
+  <a href="mailto:mr.neelj5796@gmail.com" style="color:pink ;text-decoration: underline" >mr.neelj5796@gmail.com</a></p></strong></center>
+</footer>
+{% endblock %}
+
+{% endblock %}

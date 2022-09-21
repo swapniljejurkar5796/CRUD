@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% include 'header.html'%}
+
+
+{% block title%} ADD BOOK {% endblock%}
+
+{% block body %}<center><br><br>
+<div class="container">
+<form  action="" method="post" style="border:black; border-width:2px;border-radius: 70px;border-style: outset;width: 400px;height:100px;background-color:pink;">
+  <br> <strong>Are You Sure To Delete ?</strong><br>
+    <input type="submit" value="YES" class="btn btn-danger" href="/" onclick="alert('Entry Removed !!!')">
+    <a href="/">Cancel</a>
+    </form>
+
+</div></center>
+{% endblock%}

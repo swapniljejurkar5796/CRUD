@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+
+{% block title %} BOOK CRUD {% endblock%}
+
+
+{% block body%}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><strong></strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style= " background-color: #C0C0C0;" >
+      <ul class="navbar-nav" >
+        <li class="nav-item" >
+          <a class="nav-link active" aria-current="page" href="/"><strong>HOME</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add"><strong>ADD BOOK</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/view"><strong>View BOOKS</strong></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<body background="static/h1.jpg">
+      <center><h1 style="font-family:Times New Roman; color:white; font-size: 50px; "><strong>BOOK LIBRARY</strong></h1></center><br><br><br><br>
+     <center><strong><p style="display: table;margin: 8px auto 8px auto;padding: 8px;font-size: 40px;background-color: black;color:white;  "> Making good judgments when one has complete data,<br>facts, and knowledge is not leadership - it's bookkeeping </p></strong><center>
+
+
+</body>
+{% block footer %}
+<footer style ="display: table;margin: 5px auto 5px auto;padding: 5px;font-size: 10px;background-color: black;color:cyan;"><center><strong>
+   <p style="color:cyan;background-color:black">Copyright © 2022 Swapnil_Jejurkar. All rights reserved<br>
+  <a href="mailto:mr.neelj5796@gmail.com" style="color:pink ;text-decoration: underline" >mr.neelj5796@gmail.com</a></p></strong></center>
+</footer>
+{% endblock %}
+{% endblock%}

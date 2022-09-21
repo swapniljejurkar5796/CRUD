@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% include 'header.html'%}
+
+
+{% block title%}  ADD BOOK  {% endblock%}
+
+{% block body %}
+<body background="static/.jpg"><br><br><br>
+<div class="container">
+  <form action="" method="post" text-align: center>
+    <table class="table" width="100%" cellspacing="2" cellpadding="2" border="3" align="center" >
+    <tr>
+      <td style="color:black" bgcolor="#90EE90"><center><strong>Book Name</strong></center></td>
+      <td > <input type="text" name="book_name" class="form-control"  placeholder ="         Enter Book Name             " text-align: center  required="True" style=" background-color:black"></td>
+    </tr>
+    <tr>
+      <td style="color:black" bgcolor="cyan"><center><strong>Description</strong></center></td>
+      <td> <input type="text" name="book_description" placeholder ="         Enter Description               " text-align: center class="form-control" required="True" style=" background-color:black"></td>
+    </tr>
+    <tr>
+      <td style="color:black" bgcolor="#90EE90"><center><strong>Writer</strong></center></td>
+      <td> <input type="text" name="book_writer" placeholder ="        Book Writer            " text-align: center class="form-control" required="True" style=" background-color:black"></td>
+    </tr>
+    <tr>
+      <td style="color:black" bgcolor="cyan"><center><strong>Country</strong></center></td>
+      <td> <input type="text" name="country" placeholder ="         Country Origin               " text-align: center class="form-control" required ="True" style=" background-color:black"></td>
+    </tr>
+       <td colspan="2">
+         <center><input type="submit" name="ADD" value="ADD" text-align: center class="btn btn-warning" onclick="alert('New Book Added Successfully !!!')"></center>
+       </td>
+
+    </table>
+
+  </form>
+
+</div>
+
+
+</body>
+{% endblock %}
